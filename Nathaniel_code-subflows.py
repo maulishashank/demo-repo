@@ -41,7 +41,7 @@ def display(temp_list):
     logger.info(temp_list)
 
 
-@flow(name="weather_pipeline", retries=3)
+@flow(name="weather_pipeline_subflow", retries=3)
 def pipeline(lat: float):
     temp = fetch_many_weather(lat)
     result = save_weather(temp)
