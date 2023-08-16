@@ -42,7 +42,7 @@ def display(temp_list):
 
 
 @flow(name="weather_pipeline", retries=3)
-def pipeline(lat: float = 45.7):
+def pipeline(lat: float = 42.7):
     temp = fetch_many_weather(lat)
     result = save_weather(temp)
     display(temp)
